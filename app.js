@@ -29,13 +29,12 @@ formEl.addEventListener("submit", (e) => {
   btnCompEl.className = "comp";
   btnComEl.className = "com";
 
-  btnCompleteEl.innerHTML = `  uchirish`;
-  btnCompletEl.innerHTML = `  belgilash`;
-  btnCompleEl.innerHTML = `  nimadir`;
-  btnComplEl.innerHTML = `  Complite`;
+  btnCompleteEl.innerHTML = `<i class="bi bi-check2-circle"></i><br>  bajarildi`;
+  btnCompletEl.innerHTML = `<i class="bi bi-pencil-square"></i><br>  uzgartirish`;
+  btnCompleEl.innerHTML = `<i class="bi bi-slash-circle"></i><br>  vahdi`;
+  btnComplEl.innerHTML = `<i class="bi bi-trash3-fill"></i><br>  uchirish`;
   btnCompEl.innerHTML = `  `;
   btnComEl.innerHTML = ` `;
-
   pEl.innerHTML = inputEl.value;
   divEl.appendChild(pEl);
   divBtnEl.appendChild(btnCompleteEl);
@@ -49,11 +48,12 @@ formEl.addEventListener("submit", (e) => {
   taskEl.prepend(divEl);
 
   inputEl.value = "";
+
+  btnCompleteEl.addEventListener("click", () => {
+  pEl.className.toggle("active")
 });
 
-
-
-
+});
 
 allDeleteEl.addEventListener("click", () => {
   let con = confirm("Hammasini o'chirishga rozimisiz!");
@@ -61,3 +61,5 @@ allDeleteEl.addEventListener("click", () => {
     taskEl.innerHTML = "";
   }
 });
+
+
