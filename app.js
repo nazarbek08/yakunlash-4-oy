@@ -16,7 +16,7 @@ formEl.addEventListener("submit", (e) => {
   const btnCompleEl = document.createElement("button");
   const btnComplEl = document.createElement("button");
   const btnCompEl = document.createElement("button");
-  const btnComEl = document.createElement("button");
+
   const pEl = document.createElement("p");
 
   divEl.className = "task_card";
@@ -27,14 +27,14 @@ formEl.addEventListener("submit", (e) => {
   btnCompleEl.className = "comp_b";
   btnComplEl.className = "comp_";
   btnCompEl.className = "comp";
-  btnComEl.className = "com";
+
 
   btnCompleteEl.innerHTML = `<i class="bi bi-check2-circle"></i><br>  bajarildi`;
   btnCompletEl.innerHTML = `<i class="bi bi-pencil-square"></i><br>  uzgartirish`;
-  btnCompleEl.innerHTML = `<i class="bi bi-slash-circle"></i><br>  vahdi`;
+  btnCompleEl.innerHTML = `<i class="bi bi-slash-circle"></i><br>  14:22`;
   btnComplEl.innerHTML = `<i class="bi bi-trash3-fill"></i><br>  uchirish`;
   btnCompEl.innerHTML = `  `;
-  btnComEl.innerHTML = ` `;
+
   pEl.innerHTML = inputEl.value;
   divEl.appendChild(pEl);
   divBtnEl.appendChild(btnCompleteEl);
@@ -42,7 +42,7 @@ formEl.addEventListener("submit", (e) => {
   divBtnEl.appendChild(btnCompleEl);
   divBtnEl.appendChild(btnComplEl);
   divBtnEl.appendChild(btnCompEl);
-  divBtnEl.appendChild(btnComEl);
+
 
   divEl.appendChild(divBtnEl);
   taskEl.prepend(divEl);
@@ -50,8 +50,8 @@ formEl.addEventListener("submit", (e) => {
   inputEl.value = "";
 
   btnCompleteEl.addEventListener("click", () => {
-  pEl.className.toggle("active")
-});
+    pElBtnEl.className.toggle("active")
+  });
 
 });
 
